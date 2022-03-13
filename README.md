@@ -1,11 +1,7 @@
 
 Lekhika- A web app built to facilitate women and girls to easily put forward their views and content. They can earn completely add-fre ;).
 Features of the web app:
-.User Register/login
-.Write and submit blogs
-.See blogs of others and comment
-.Web monetized content using coil
-.Become a coil member and enjoy amazing content
+User Register/login, write and submit blogs, see blogs of others and comment and get web monetized content using coil or make your content monetized. Become a coil member to enjoy amazing contents.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
