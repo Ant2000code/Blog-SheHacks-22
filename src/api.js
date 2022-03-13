@@ -49,6 +49,7 @@ export const getComments = async () => {
   export const createComment = async (text, parentId) => {
       if(parentId==null)
       parentId=0;
+      console.log("received"+text);
     const comm={
         body:text,
         parentId:parentId,

@@ -62,7 +62,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
         .then((response)=>{
          comments= response.data;
          setBackendComments(comments);
-        console.log("comments..."+backendComments); 
+        console.log("comments..."+comments[0].body); 
         })
         .catch(error=>console.log(error));
 

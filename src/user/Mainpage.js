@@ -7,6 +7,7 @@ import Login from "./login";
 //import Button from "@restart/ui/esm/Button";
 import * as actions from '../auth';
 import { connect } from "react-redux";
+import { NavLink } from 'react-router-dom';
 
 
 class HomePage extends React.Component {
@@ -21,14 +22,19 @@ class HomePage extends React.Component {
                 
                 <div className="background" id="google_translate_element">
                     <div className="leftdiv">
-                    {/* <img src={home} height="100%"/> */}
+                     <img src={require('./bgg.PNG')} height="100%"/>
                     </div>
+
                     <div className="rightdiv">
-                        <h2>Start Something Epic!</h2>
+                        <h2>Lekhika....unlock yourself!</h2>
                         
                         {
                             this.state.isAuthenticated ?
-                                <Button type="primary" onClick={this.props.logout}>Logout!</Button>
+                            <>
+                                 <NavLink to="./"><Button type="dark" >Go to blog</Button></NavLink>
+                                 
+                                <Button type="dark" onClick={this.props.logout}>Logout</Button>
+                                </>
                                 :
                                 <div className="account">
                                     <SignUp >

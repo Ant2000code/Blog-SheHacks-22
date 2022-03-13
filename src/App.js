@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import ContactUS from './containers/ContactUS';
 import Post from './containers/Post';
 import HomePage from './user/Mainpage'
-
+import Share from './AddPost/AddPost';
 function App() {
   return (
 
@@ -19,7 +19,7 @@ function App() {
         
         <Route path="/contact-us"  component={ContactUS}/>
         <Route path="/post/:slug" component={Post} />
-       
+       <Route exact path="/Add post" component={Share}/>
 
        
         

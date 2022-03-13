@@ -12,6 +12,7 @@ const Sidebar = (props) => {
 
 
     const [posts, setPosts] = useState([]);
+    const [user,setUser]=useState({});
     
    function get()
     {
@@ -22,7 +23,21 @@ const Sidebar = (props) => {
                 setPosts(posts);
             })
             .catch(error=>console.log(error));
-        }
+
+            axios.defaults.headers = {
+                "Content-Type": "application/json",
+                Authorization: "Token "+localStorage.getItem('token')
+              }
+            axios.get('http://localhost:8000/details/')
+            .then((response)=>{
+                const user= response.data[0];
+                console.log("show"+response.data);
+                setUser(user);
+            })
+            .catch(error=>console.log(error));
+
+        
+    }
     }
     useEffect(() => {
         //const posts = blogPost.data;
@@ -43,10 +58,10 @@ const Sidebar = (props) => {
                     <span>About Me</span>
                 </div>
                 <div className="profileImageContainer">
-                    <img src="C:\Users\hp\Downloads\userpic.jpg" alt="" />
+                    <img src={'http://localhost:8000' + user.pic} alt="" />
                 </div>
                 <div className="cardBody">
-                    <p className="personalBio">I am Anita Tiwari, a homemaker and that is more than enough ;)</p>
+                    <p className="personalBio">heyy</p>
                 </div>
             </Card>
 

@@ -31,3 +31,4 @@ class Comment(models.Model):
     #parentId=models.ForeignKey('self',related_name="self",null=True,on_delete=models.CASCADE)
     parentId=models.IntegerField(default=0)
     createdAt=models.DateField()
+    post=models.ForeignKey(Posts,related_name="postc",blank=True,on_delete=models.CASCADE)
